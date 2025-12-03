@@ -81,57 +81,65 @@
 
 <body class="font-sans text-brand-dark antialiased bg-white">
 
-    <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 border-b-2 border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 md:h-24 items-center">
-                <div class="flex-shrink-0 flex items-center cursor-pointer">
-                    <img src="images/logo2.png" alt="Learning Centre"
-                        class="h-12 md:h-16 w-auto object-contain animate-pulse-slow">
-                </div>
+    <div id="mobile-overlay"
+        class="fixed inset-0 bg-brand-dark/80 backdrop-blur-sm z-40 transition-all duration-500 ease-in-out opacity-0 pointer-events-none">
+    </div>
 
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#inicio"
-                        class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Inicio</a>
-                    <a href="#cursos"
-                        class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Cursos</a>
-                    <a href="#metodologia"
-                        class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Metodología</a>
-                    <a href="#contacto"
-                        class="sketchy-button bg-brand-red text-white px-6 py-2 rounded-xl font-bold tracking-wide hover:bg-red-500 transition rotate-sketch-1">
-                        Inscribirse
-                    </a>
-                </div>
+    <nav class="fixed w-full z-50 top-0">
+        <div class="bg-white/95 shadow-sm border-b-2 border-gray-100 relative z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between h-20 md:h-24 items-center">
 
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn"
-                        class="text-brand-dark hover:text-brand-cyan focus:outline-none p-2 border-2 border-brand-dark rounded-lg bg-white">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
+                    <div class="flex-shrink-0 flex items-center cursor-pointer">
+                        <img src="images/logo2.png" alt="Learning Centre"
+                            class="h-12 md:h-16 w-auto object-contain animate-pulse-slow">
+                    </div>
+
+                    <div class="hidden md:flex space-x-8 items-center">
+                        <a href="#inicio"
+                            class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Inicio</a>
+                        <a href="#cursos"
+                            class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Cursos</a>
+                        <a href="#metodologia"
+                            class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Metodología</a>
+                        <a href="#contacto"
+                            class="sketchy-button bg-brand-red text-white px-6 py-2 rounded-xl font-bold tracking-wide hover:bg-red-500 transition rotate-sketch-1">
+                            Inscribirse
+                        </a>
+                    </div>
+
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-btn"
+                            class="text-brand-dark hover:text-brand-cyan focus:outline-none p-2 border-2 border-brand-dark rounded-lg bg-white transition-colors duration-200">
+                            <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div id="mobile-menu"
-            class="hidden md:hidden bg-white border-t-4 border-brand-dark absolute w-full left-0 shadow-2xl z-50">
-            <div class="px-6 py-8 space-y-4 flex flex-col items-center bg-brand-light">
+            class="md:hidden bg-white border-b-4 border-brand-dark absolute w-full left-0 shadow-2xl z-40 transition-all duration-500 ease-in-out transform origin-top opacity-0 -translate-y-5 pointer-events-none">
+
+            <div class="px-6 py-8 space-y-4 flex flex-col items-center bg-brand-light max-h-[80vh] overflow-y-auto">
 
                 <a href="#inicio"
-                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-cyan text-brand-dark border-2 border-brand-dark rotate-sketch-n1 hover:scale-105 transition-transform">
+                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-cyan text-brand-dark border-2 border-brand-dark rotate-sketch-n1 hover:scale-105 transition-transform active:scale-95">
                     <i class="fas fa-home mr-2 text-brand-dark/50"></i> Inicio
                 </a>
 
                 <a href="#cursos"
-                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-yellow text-brand-dark border-2 border-brand-dark rotate-sketch-1 hover:scale-105 transition-transform">
+                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-yellow text-brand-dark border-2 border-brand-dark rotate-sketch-1 hover:scale-105 transition-transform active:scale-95">
                     <i class="fas fa-shapes mr-2 text-brand-dark/50"></i> Cursos
                 </a>
 
                 <a href="#metodologia"
-                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-green text-brand-dark border-2 border-brand-dark rotate-sketch-n1 hover:scale-105 transition-transform">
+                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-green text-brand-dark border-2 border-brand-dark rotate-sketch-n1 hover:scale-105 transition-transform active:scale-95">
                     <i class="fas fa-lightbulb mr-2 text-brand-dark/50"></i> Metodología
                 </a>
 
                 <a href="#contacto"
-                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-red text-white border-2 border-brand-dark rotate-sketch-1 hover:scale-105 transition-transform shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-red text-white border-2 border-brand-dark rotate-sketch-1 hover:scale-105 transition-transform shadow-[4px_4px_0px_0px_rgba(51,51,51,1)] active:scale-95 active:shadow-none active:translate-x-1 active:translate-y-1">
                     Inscribirse <i class="fas fa-arrow-right ml-2"></i>
                 </a>
 
@@ -146,7 +154,6 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
                 <div class="text-center lg:text-left relative">
                     <span
                         class="inline-block py-2 px-4 rounded-full bg-brand-cyan/10 text-brand-cyan font-bold text-sm mb-6 border-2 border-brand-cyan/20 rotate-sketch-n2">
@@ -162,8 +169,8 @@
                     </h1>
                     <p
                         class="text-xl text-gray-700 mb-10 max-w-lg mx-auto lg:mx-0 font-medium leading-relaxed bg-white/80 p-2 rounded-lg">
-                        Clases dinámicas y divertidas para niños, pre-adolescentes, adolescentes y adultos. ¡Aprender el
-                        idioma nunca fue tan emocionante!
+                        Clases dinámicas y divertidas para niños, adolescentes y adultos. ¡Aprender el idioma nunca fue
+                        tan emocionante!
                     </p>
                     <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
                         <a href="#contacto"
@@ -248,7 +255,6 @@
                 Nuestros Cursos
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
-
                 <div
                     class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col sketchy-border rotate-sketch-n1">
                     <div
@@ -324,7 +330,6 @@
                             programa</button>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -335,7 +340,6 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
                 <div class="bg-white p-8 rounded-3xl sketchy-border rotate-sketch-1">
                     <h2 class="text-3xl font-extrabold text-brand-dark mb-6 relative inline-block px-2">
                         <span
@@ -412,13 +416,11 @@
                         </span>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <footer class="bg-white text-brand-dark py-12 relative overflow-hidden border-t-4 border-brand-dark">
-
         <div
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
             <div class="flex flex-col items-center md:items-start gap-4">
@@ -428,7 +430,6 @@
 
             <div class="text-center md:text-right">
                 <p class="text-brand-dark font-bold text-lg mb-4">© 2024 Learning Centre Eldorado.</p>
-
                 <div class="flex space-x-6 justify-center md:justify-end">
                     <a href="#"
                         class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-cyan hover:text-brand-dark transition transform hover:scale-110 hover:rotate-3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"><i
@@ -447,17 +448,54 @@
     <script>
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
+        const overlay = document.getElementById('mobile-overlay');
+        const icon = document.getElementById('menu-icon');
+        const links = menu.querySelectorAll('a');
 
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+        let isMenuOpen = false;
 
-        // Cierra el menú si se hace click en un enlace
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
+        function toggleMenu() {
+            isMenuOpen = !isMenuOpen;
+
+            if (isMenuOpen) {
+                // ABRIR (Animación de entrada)
+                // Overlay: Visible y clickeable
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                overlay.classList.add('opacity-100', 'pointer-events-auto');
+
+                // Menú: Visible, en su sitio (translate-y-0) y clickeable
+                menu.classList.remove('opacity-0', '-translate-y-5', 'pointer-events-none');
+                menu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
+
+                // Icono X
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+
+                // Bloquear scroll
+                document.body.style.overflow = 'hidden';
+
+            } else {
+                // CERRAR (Animación de salida)
+                // Overlay: Invisible y no clickeable
+                overlay.classList.remove('opacity-100', 'pointer-events-auto');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+
+                // Menú: Invisible, sube un poco (-5) y no clickeable
+                menu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
+                menu.classList.add('opacity-0', '-translate-y-5', 'pointer-events-none');
+
+                // Icono Hamburguesa
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+
+                // Reactivar scroll
+                document.body.style.overflow = '';
+            }
+        }
+
+        btn.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+        links.forEach(link => link.addEventListener('click', toggleMenu));
     </script>
 
 </body>
