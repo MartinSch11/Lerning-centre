@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,93 +13,128 @@
             theme: {
                 extend: {
                     colors: {
-                        // Colores extraídos de la energía del logo "sketch"
                         brand: {
-                            dark: '#333333',   // El gris oscuro/carbón del texto "CENTRE"
-                            red: '#E63946',    // Rojo vibrante del logo
-                            cyan: '#4CC9F0',   // Azul claro vibrante del logo
-                            green: '#A7C957',  // Verde lima del logo
-                            yellow: '#FFBD00', // Amarillo/Dorado vibrante del logo
-                            light: '#F7F9FB'   // Un fondo casi blanco, muy limpio
+                            dark: '#333333',
+                            red: '#E63946',
+                            cyan: '#4CC9F0',
+                            green: '#A7C957',
+                            yellow: '#FFBD00',
+                            light: '#F7F9FB'
                         }
                     },
                     fontFamily: {
-                        // Usaremos una fuente estándar pero juguetona para los títulos
                         sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
                     },
-                     animation: {
+                    animation: {
                         blob: "blob 7s infinite",
-                      },
-                      keyframes: {
+                    },
+                    keyframes: {
                         blob: {
-                          "0%": {
-                            transform: "translate(0px, 0px) scale(1)",
-                          },
-                          "33%": {
-                            transform: "translate(30px, -50px) scale(1.1)",
-                          },
-                          "66%": {
-                            transform: "translate(-20px, 20px) scale(0.9)",
-                          },
-                          "100%": {
-                            transform: "translate(0px, 0px) scale(1)",
-                          },
+                            "0%": { transform: "translate(0px, 0px) scale(1)" },
+                            "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+                            "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+                            "100%": { transform: "translate(0px, 0px) scale(1)" },
                         },
-                      },
+                    },
                 }
             }
         }
     </script>
     <style>
-        /* Suavizado de scroll */
-        html { scroll-behavior: smooth; }
-        
-        /* Estilo "Sketch" (Dibujo) para botones y elementos */
+        html {
+            scroll-behavior: smooth;
+        }
+
         .sketchy-border {
             border: 3px solid #333333;
-             box-shadow: 4px 4px 0px 0px rgba(51,51,51,1);
+            box-shadow: 4px 4px 0px 0px rgba(51, 51, 51, 1);
         }
 
         .sketchy-button {
             border: 3px solid #333333;
-            box-shadow: 3px 3px 0px 0px rgba(51,51,51,1);
+            box-shadow: 3px 3px 0px 0px rgba(51, 51, 51, 1);
             transition: all 0.2s ease-in-out;
         }
+
         .sketchy-button:hover {
-             box-shadow: 1px 1px 0px 0px rgba(51,51,51,1);
-             transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px 0px rgba(51, 51, 51, 1);
+            transform: translate(2px, 2px);
         }
-        
-        /* Utilidad para rotar elementos ligeramente */
-        .rotate-sketch-1 { transform: rotate(1deg); }
-        .rotate-sketch-n1 { transform: rotate(-1deg); }
-        .rotate-sketch-2 { transform: rotate(2deg); }
-        .rotate-sketch-n2 { transform: rotate(-2deg); }
+
+        .rotate-sketch-1 {
+            transform: rotate(1deg);
+        }
+
+        .rotate-sketch-n1 {
+            transform: rotate(-1deg);
+        }
+
+        .rotate-sketch-2 {
+            transform: rotate(2deg);
+        }
+
+        .rotate-sketch-n2 {
+            transform: rotate(-2deg);
+        }
     </style>
 </head>
+
 <body class="font-sans text-brand-dark antialiased bg-white">
 
     <nav class="bg-white/95 backdrop-blur-sm shadow-sm fixed w-full z-50 border-b-2 border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 md:h-24 items-center">
                 <div class="flex-shrink-0 flex items-center cursor-pointer">
-                    <img src="images/logo2.png" alt="Learning Centre" class="h-12 md:h-16 w-auto object-contain animate-pulse-slow">
+                    <img src="images/logo2.png" alt="Learning Centre"
+                        class="h-12 md:h-16 w-auto object-contain animate-pulse-slow">
                 </div>
-                
+
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#inicio" class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Inicio</a>
-                    <a href="#cursos" class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Cursos</a>
-                    <a href="#metodologia" class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Metodología</a>
-                    <a href="#contacto" class="sketchy-button bg-brand-red text-white px-6 py-2 rounded-xl font-bold tracking-wide hover:bg-red-500 transition rotate-sketch-1">
+                    <a href="#inicio"
+                        class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Inicio</a>
+                    <a href="#cursos"
+                        class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Cursos</a>
+                    <a href="#metodologia"
+                        class="text-brand-dark hover:text-brand-cyan font-bold transition text-lg">Metodología</a>
+                    <a href="#contacto"
+                        class="sketchy-button bg-brand-red text-white px-6 py-2 rounded-xl font-bold tracking-wide hover:bg-red-500 transition rotate-sketch-1">
                         Inscribirse
                     </a>
                 </div>
 
                 <div class="md:hidden flex items-center">
-                    <button class="text-brand-dark hover:text-brand-cyan focus:outline-none p-2 border-2 border-brand-dark rounded-lg">
+                    <button id="mobile-menu-btn"
+                        class="text-brand-dark hover:text-brand-cyan focus:outline-none p-2 border-2 border-brand-dark rounded-lg bg-white">
                         <i class="fas fa-bars text-2xl"></i>
                     </button>
                 </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-t-4 border-brand-dark absolute w-full left-0 shadow-2xl z-50">
+            <div class="px-6 py-8 space-y-4 flex flex-col items-center bg-brand-light">
+
+                <a href="#inicio"
+                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-cyan text-brand-dark border-2 border-brand-dark rotate-sketch-n1 hover:scale-105 transition-transform">
+                    <i class="fas fa-home mr-2 text-brand-dark/50"></i> Inicio
+                </a>
+
+                <a href="#cursos"
+                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-yellow text-brand-dark border-2 border-brand-dark rotate-sketch-1 hover:scale-105 transition-transform">
+                    <i class="fas fa-shapes mr-2 text-brand-dark/50"></i> Cursos
+                </a>
+
+                <a href="#metodologia"
+                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-green text-brand-dark border-2 border-brand-dark rotate-sketch-n1 hover:scale-105 transition-transform">
+                    <i class="fas fa-lightbulb mr-2 text-brand-dark/50"></i> Metodología
+                </a>
+
+                <a href="#contacto"
+                    class="sketchy-button block w-full text-center py-4 rounded-xl font-black text-xl bg-brand-red text-white border-2 border-brand-dark rotate-sketch-1 hover:scale-105 transition-transform shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                    Inscribirse <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+
             </div>
         </div>
     </nav>
@@ -110,33 +146,45 @@
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
                 <div class="text-center lg:text-left relative">
-                    <span class="inline-block py-2 px-4 rounded-full bg-brand-cyan/10 text-brand-cyan font-bold text-sm mb-6 border-2 border-brand-cyan/20 rotate-sketch-n2">
+                    <span
+                        class="inline-block py-2 px-4 rounded-full bg-brand-cyan/10 text-brand-cyan font-bold text-sm mb-6 border-2 border-brand-cyan/20 rotate-sketch-n2">
                         📍 Eldorado, Misiones
                     </span>
                     <h1 class="text-5xl md:text-6xl lg:text-7xl font-extrabold text-brand-dark leading-none mb-8">
                         Abrí tu mundo <br>
                         <span class="relative inline-block mt-2 px-2">
-                            <span class="absolute inset-0 bg-brand-yellow transform -skew-y-2 rounded-lg -z-10 border-3 border-brand-dark shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]"></span>
+                            <span
+                                class="absolute inset-0 bg-brand-yellow transform -skew-y-2 rounded-lg -z-10 border-3 border-brand-dark shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]"></span>
                             hablando inglés.
                         </span>
                     </h1>
-                    <p class="text-xl text-gray-700 mb-10 max-w-lg mx-auto lg:mx-0 font-medium leading-relaxed bg-white/80 p-2 rounded-lg">
-                        Clases dinámicas y divertidas para niños, pre-adolescentes, adolescentes y adultos. ¡Aprender el idioma nunca fue tan emocionante!
+                    <p
+                        class="text-xl text-gray-700 mb-10 max-w-lg mx-auto lg:mx-0 font-medium leading-relaxed bg-white/80 p-2 rounded-lg">
+                        Clases dinámicas y divertidas para niños, pre-adolescentes, adolescentes y adultos. ¡Aprender el
+                        idioma nunca fue tan emocionante!
                     </p>
                     <div class="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start">
-                        <a href="#contacto" class="sketchy-button bg-brand-red text-white px-8 py-4 rounded-xl font-bold text-xl tracking-wide hover:bg-red-500 text-center rotate-sketch-1">
+                        <a href="#contacto"
+                            class="sketchy-button bg-brand-red text-white px-8 py-4 rounded-xl font-bold text-xl tracking-wide hover:bg-red-500 text-center rotate-sketch-1">
                             Empezar ahora
                         </a>
-                        <a href="#cursos" class="sketchy-button bg-white text-brand-dark px-8 py-4 rounded-xl font-bold text-xl tracking-wide hover:bg-brand-cyan/10 text-center rotate-sketch-n1">
+                        <a href="#cursos"
+                            class="sketchy-button bg-white text-brand-dark px-8 py-4 rounded-xl font-bold text-xl tracking-wide hover:bg-brand-cyan/10 text-center rotate-sketch-n1">
                             Ver niveles
                         </a>
                     </div>
                 </div>
-                <div class="relative hidden lg:block">
-                    <div class="absolute inset-0 sketchy-border rounded-3xl transform translate-x-4 translate-y-4 bg-brand-cyan rotate-sketch-2"></div>
-                    <div class="relative rounded-3xl overflow-hidden sketchy-border bg-gray-100 aspect-[4/3] z-10 rotate-sketch-n1">
-                         <img src="images/childrensandteacher.png" alt="Estudiantes felices Learning Centre" class="w-full h-full object-cover">
+
+                <div class="relative block mt-12 lg:mt-0">
+                    <div
+                        class="absolute inset-0 sketchy-border rounded-3xl transform translate-x-4 translate-y-4 bg-brand-cyan rotate-sketch-2">
+                    </div>
+                    <div
+                        class="relative rounded-3xl overflow-hidden sketchy-border bg-gray-100 aspect-[4/3] z-10 rotate-sketch-n1">
+                        <img src="images/childrensandteacher.png" alt="Estudiantes felices Learning Centre"
+                            class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -144,37 +192,48 @@
     </section>
 
     <section id="metodologia" class="py-24 bg-brand-light relative">
-        <div class="absolute top-0 inset-x-0 h-6 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDEyMCIgcHJZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHN0eWxlPSJmaWxsOiNmZmZmZmY7Ij48cGF0aCBkPSJNMA0KMGwxMjAwIDBoLTEyMDB6bTAgNjBsMTIwMCAwIDAgNjAtMTIwMCAweiIvPjwvc3ZnPg==')] bg-repeat-x bg-contain" style="filter: drop-shadow(0px 4px 0px #333);"></div>
-        
+        <div class="absolute top-0 inset-x-0 h-6 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDEyMCIgcHJZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHN0eWxlPSJmaWxsOiNmZmZmZmY7Ij48cGF0aCBkPSJNMA0KMGwxMjAwIDBoLTEyMDB6bTAgNjBsMTIwMCAwIDAgNjAtMTIwMCAweiIvPjwvc3ZnPg==')] bg-repeat-x bg-contain"
+            style="filter: drop-shadow(0px 4px 0px #333);"></div>
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
             <div class="text-center mb-20">
                 <h2 class="text-4xl font-extrabold text-brand-dark inline-block relative px-4">
-                    <span class="absolute inset-0 bg-brand-green/30 transform skew-y-2 rounded-lg -z-10 border-2 border-brand-dark"></span>
+                    <span
+                        class="absolute inset-0 bg-brand-green/30 transform skew-y-2 rounded-lg -z-10 border-2 border-brand-dark"></span>
                     ¿Por qué elegirnos?
                 </h2>
                 <p class="mt-6 text-xl text-gray-600 font-medium">Más color, más diversión, mejor aprendizaje.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="p-8 bg-white rounded-3xl sketchy-border hover:shadow-none transition-all group hover:translate-x-1 hover:translate-y-1 rotate-sketch-1">
-                    <div class="w-16 h-16 bg-brand-yellow rounded-2xl flex items-center justify-center text-brand-dark mb-6 text-3xl sketchy-border group-hover:shadow-none transition-all group-hover:translate-x-1 group-hover:translate-y-1">
+                <div
+                    class="p-8 bg-white rounded-3xl sketchy-border hover:shadow-none transition-all group hover:translate-x-1 hover:translate-y-1 rotate-sketch-1">
+                    <div
+                        class="w-16 h-16 bg-brand-yellow rounded-2xl flex items-center justify-center text-brand-dark mb-6 text-3xl sketchy-border group-hover:shadow-none transition-all group-hover:translate-x-1 group-hover:translate-y-1">
                         <i class="fas fa-certificate"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Certificaciones</h3>
-                    <p class="text-gray-600 text-lg">Preparamos a nuestros alumnos para exámenes internacionales con seriedad y alegría.</p>
+                    <p class="text-gray-600 text-lg">Preparamos a nuestros alumnos para exámenes internacionales con
+                        seriedad y alegría.</p>
                 </div>
-                <div class="p-8 bg-white rounded-3xl sketchy-border hover:shadow-none transition-all group hover:translate-x-1 hover:translate-y-1 rotate-sketch-n1 z-10">
-                    <div class="w-16 h-16 bg-brand-cyan rounded-2xl flex items-center justify-center text-brand-dark mb-6 text-3xl sketchy-border group-hover:shadow-none transition-all group-hover:translate-x-1 group-hover:translate-y-1">
+                <div
+                    class="p-8 bg-white rounded-3xl sketchy-border hover:shadow-none transition-all group hover:translate-x-1 hover:translate-y-1 rotate-sketch-n1 z-10">
+                    <div
+                        class="w-16 h-16 bg-brand-cyan rounded-2xl flex items-center justify-center text-brand-dark mb-6 text-3xl sketchy-border group-hover:shadow-none transition-all group-hover:translate-x-1 group-hover:translate-y-1">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Grupos Reducidos</h3>
-                    <p class="text-gray-600 text-lg">Atención personalizada para asegurar que cada voz se escuche y practique.</p>
+                    <p class="text-gray-600 text-lg">Atención personalizada para asegurar que cada voz se escuche y
+                        practique.</p>
                 </div>
-                <div class="p-8 bg-white rounded-3xl sketchy-border hover:shadow-none transition-all group hover:translate-x-1 hover:translate-y-1 rotate-sketch-2">
-                    <div class="w-16 h-16 bg-brand-green rounded-2xl flex items-center justify-center text-brand-dark mb-6 text-3xl sketchy-border group-hover:shadow-none transition-all group-hover:translate-x-1 group-hover:translate-y-1">
+                <div
+                    class="p-8 bg-white rounded-3xl sketchy-border hover:shadow-none transition-all group hover:translate-x-1 hover:translate-y-1 rotate-sketch-2">
+                    <div
+                        class="w-16 h-16 bg-brand-green rounded-2xl flex items-center justify-center text-brand-dark mb-6 text-3xl sketchy-border group-hover:shadow-none transition-all group-hover:translate-x-1 group-hover:translate-y-1">
                         <i class="fas fa-shapes"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Metodología Lúdica</h3>
-                    <p class="text-gray-600 text-lg">Hacemos el inglés dinámico para todos. Aprender no tiene por qué ser aburrido.</p>
+                    <p class="text-gray-600 text-lg">Hacemos el inglés dinámico para todos. Aprender no tiene por qué
+                        ser aburrido.</p>
                 </div>
             </div>
         </div>
@@ -182,57 +241,87 @@
 
     <section id="cursos" class="py-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <h2 class="text-4xl font-extrabold text-brand-dark mb-16 text-center relative inline-block left-1/2 transform -translate-x-1/2 px-4">
-                <span class="absolute inset-0 bg-brand-cyan/30 transform -skew-y-2 rounded-lg -z-10 border-2 border-brand-dark"></span>
+            <h2
+                class="text-4xl font-extrabold text-brand-dark mb-16 text-center relative inline-block left-1/2 transform -translate-x-1/2 px-4">
+                <span
+                    class="absolute inset-0 bg-brand-cyan/30 transform -skew-y-2 rounded-lg -z-10 border-2 border-brand-dark"></span>
                 Nuestros Cursos
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
-                
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col sketchy-border rotate-sketch-n1">
-                    <div class="h-48 bg-brand-green flex items-center justify-center text-brand-dark text-6xl relative overflow-hidden border-b-3 border-brand-dark">
-                         <i class="fas fa-child relative z-10"></i>
-                         <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent scale-150 animate-blob"></div>
+
+                <div
+                    class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col sketchy-border rotate-sketch-n1">
+                    <div
+                        class="h-48 bg-brand-green flex items-center justify-center text-brand-dark text-6xl relative overflow-hidden border-b-3 border-brand-dark">
+                        <i class="fas fa-child relative z-10"></i>
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent scale-150 animate-blob">
+                        </div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col">
                         <h3 class="text-2xl font-extrabold text-brand-dark mb-3">Kids</h3>
-                        <p class="text-gray-600 font-medium mb-6">De 6 a 10 años. Introducción divertida al mundo bilingüe.</p>
-                        <button class="sketchy-button mt-auto w-full py-3 bg-white text-brand-dark rounded-xl font-bold hover:bg-brand-green/20 transition">Ver programa</button>
+                        <p class="text-gray-600 font-medium mb-6">De 6 a 10 años. Introducción divertida al mundo
+                            bilingüe.</p>
+                        <button
+                            class="sketchy-button mt-auto w-full py-3 bg-white text-brand-dark rounded-xl font-bold hover:bg-brand-green/20 transition">Ver
+                            programa</button>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col sketchy-border rotate-sketch-1 lg:mt-10">
-                    <div class="h-48 bg-brand-cyan flex items-center justify-center text-brand-dark text-6xl relative overflow-hidden border-b-3 border-brand-dark">
+                <div
+                    class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col sketchy-border rotate-sketch-1 lg:mt-10">
+                    <div
+                        class="h-48 bg-brand-cyan flex items-center justify-center text-brand-dark text-6xl relative overflow-hidden border-b-3 border-brand-dark">
                         <i class="fas fa-headphones relative z-10"></i>
-                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent scale-150 animate-blob animation-delay-2000"></div>
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent scale-150 animate-blob animation-delay-2000">
+                        </div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col">
                         <h3 class="text-2xl font-extrabold text-brand-dark mb-3">Teens</h3>
-                        <p class="text-gray-600 font-medium mb-6">Adolescentes. Apoyo escolar y fluidez conversacional.</p>
-                        <button class="sketchy-button mt-auto w-full py-3 bg-white text-brand-dark rounded-xl font-bold hover:bg-brand-cyan/20 transition">Ver programa</button>
+                        <p class="text-gray-600 font-medium mb-6">Adolescentes. Apoyo escolar y fluidez conversacional.
+                        </p>
+                        <button
+                            class="sketchy-button mt-auto w-full py-3 bg-white text-brand-dark rounded-xl font-bold hover:bg-brand-cyan/20 transition">Ver
+                            programa</button>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col sketchy-border rotate-sketch-n2">
-                    <div class="h-48 bg-brand-red flex items-center justify-center text-white text-6xl relative overflow-hidden border-b-3 border-brand-dark">
+                <div
+                    class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col sketchy-border rotate-sketch-n2">
+                    <div
+                        class="h-48 bg-brand-red flex items-center justify-center text-white text-6xl relative overflow-hidden border-b-3 border-brand-dark">
                         <i class="fas fa-briefcase relative z-10"></i>
-                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent scale-150 animate-blob animation-delay-4000"></div>
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent scale-150 animate-blob animation-delay-4000">
+                        </div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col">
                         <h3 class="text-2xl font-extrabold text-brand-dark mb-3">Adults</h3>
-                        <p class="text-gray-600 font-medium mb-6">Trabajo, viajes y negocios. Horarios flexibles y dinámicos.</p>
-                        <button class="sketchy-button mt-auto w-full py-3 bg-white text-brand-dark rounded-xl font-bold hover:bg-brand-red/20 transition">Ver programa</button>
+                        <p class="text-gray-600 font-medium mb-6">Trabajo, viajes y negocios. Horarios flexibles y
+                            dinámicos.</p>
+                        <button
+                            class="sketchy-button mt-auto w-full py-3 bg-white text-brand-dark rounded-xl font-bold hover:bg-brand-red/20 transition">Ver
+                            programa</button>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col sketchy-border rotate-sketch-2 lg:mt-10">
-                    <div class="h-48 bg-brand-yellow flex items-center justify-center text-brand-dark text-6xl relative overflow-hidden border-b-3 border-brand-dark">
+                <div
+                    class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 flex flex-col sketchy-border rotate-sketch-2 lg:mt-10">
+                    <div
+                        class="h-48 bg-brand-yellow flex items-center justify-center text-brand-dark text-6xl relative overflow-hidden border-b-3 border-brand-dark">
                         <i class="fas fa-graduation-cap relative z-10"></i>
-                        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent scale-150 animate-blob"></div>
+                        <div
+                            class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent scale-150 animate-blob">
+                        </div>
                     </div>
                     <div class="p-8 flex-1 flex flex-col">
                         <h3 class="text-2xl font-extrabold text-brand-dark mb-3">Exámenes</h3>
-                        <p class="text-gray-600 font-medium mb-6">Preparación específica para rendir certificaciones internacionales.</p>
-                        <button class="sketchy-button mt-auto w-full py-3 bg-white text-brand-dark rounded-xl font-bold hover:bg-brand-yellow/20 transition">Ver programa</button>
+                        <p class="text-gray-600 font-medium mb-6">Preparación específica para rendir certificaciones
+                            internacionales.</p>
+                        <button
+                            class="sketchy-button mt-auto w-full py-3 bg-white text-brand-dark rounded-xl font-bold hover:bg-brand-yellow/20 transition">Ver
+                            programa</button>
                     </div>
                 </div>
 
@@ -241,38 +330,49 @@
     </section>
 
     <section id="contacto" class="py-24 bg-brand-light relative">
-         <div class="absolute top-0 inset-x-0 h-6 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDEyMCIgcHJZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHN0eWxlPSJmaWxsOiNmZmZmZmY7Ij48cGF0aCBkPSJNMA0KNjBsMTIwMCAwIDAgNjAtMTIwMCAweiIvPjwvc3ZnPg==')] bg-repeat-x bg-contain" style="filter: drop-shadow(0px -4px 0px #333);"></div>
+        <div class="absolute top-0 inset-x-0 h-6 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDEyMCIgcHJZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHN0eWxlPSJmaWxsOiNmZmZmZmY7Ij48cGF0aCBkPSJNMA0KNjBsMTIwMCAwIDAgNjAtMTIwMCAweiIvPjwvc3ZnPg==')] bg-repeat-x bg-contain"
+            style="filter: drop-shadow(0px -4px 0px #333);"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                
+
                 <div class="bg-white p-8 rounded-3xl sketchy-border rotate-sketch-1">
                     <h2 class="text-3xl font-extrabold text-brand-dark mb-6 relative inline-block px-2">
-                        <span class="absolute inset-0 bg-brand-red/20 transform -skew-y-1 rounded-lg -z-10 border-2 border-brand-dark"></span>
+                        <span
+                            class="absolute inset-0 bg-brand-red/20 transform -skew-y-1 rounded-lg -z-10 border-2 border-brand-dark"></span>
                         ¡Contactanos!
                     </h2>
-                    <p class="text-gray-600 mb-8 text-lg font-medium">Déjanos tus datos y te contactaremos para un test de nivelación.</p>
-                    
+                    <p class="text-gray-600 mb-8 text-lg font-medium">Déjanos tus datos y te contactaremos para un test
+                        de nivelación.</p>
+
                     <form class="space-y-6">
                         <div>
                             <label class="block text-sm font-bold text-brand-dark mb-2 pl-1">Nombre completo</label>
-                            <input type="text" class="mt-1 block w-full rounded-xl border-3 border-brand-dark bg-white p-4 font-medium shadow-[4px_4px_0px_0px_rgba(51,51,51,1)] focus:shadow-[2px_2px_0px_0px_rgba(51,51,51,1)] focus:translate-x-0.5 focus:translate-y-0.5 focus:outline-none transition" placeholder="Tu nombre">
+                            <input type="text"
+                                class="mt-1 block w-full rounded-xl border-3 border-brand-dark bg-white p-4 font-medium shadow-[4px_4px_0px_0px_rgba(51,51,51,1)] focus:shadow-[2px_2px_0px_0px_rgba(51,51,51,1)] focus:translate-x-0.5 focus:translate-y-0.5 focus:outline-none transition"
+                                placeholder="Tu nombre">
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-brand-dark mb-2 pl-1">Email</label>
-                            <input type="email" class="mt-1 block w-full rounded-xl border-3 border-brand-dark bg-white p-4 font-medium shadow-[4px_4px_0px_0px_rgba(51,51,51,1)] focus:shadow-[2px_2px_0px_0px_rgba(51,51,51,1)] focus:translate-x-0.5 focus:translate-y-0.5 focus:outline-none transition" placeholder="tucorreo@ejemplo.com">
+                            <input type="email"
+                                class="mt-1 block w-full rounded-xl border-3 border-brand-dark bg-white p-4 font-medium shadow-[4px_4px_0px_0px_rgba(51,51,51,1)] focus:shadow-[2px_2px_0px_0px_rgba(51,51,51,1)] focus:translate-x-0.5 focus:translate-y-0.5 focus:outline-none transition"
+                                placeholder="tucorreo@ejemplo.com">
                         </div>
                         <div>
                             <label class="block text-sm font-bold text-brand-dark mb-2 pl-1">Mensaje</label>
-                            <textarea rows="4" class="mt-1 block w-full rounded-xl border-3 border-brand-dark bg-white p-4 font-medium shadow-[4px_4px_0px_0px_rgba(51,51,51,1)] focus:shadow-[2px_2px_0px_0px_rgba(51,51,51,1)] focus:translate-x-0.5 focus:translate-y-0.5 focus:outline-none transition" placeholder="Hola, quisiera saber..."></textarea>
+                            <textarea rows="4"
+                                class="mt-1 block w-full rounded-xl border-3 border-brand-dark bg-white p-4 font-medium shadow-[4px_4px_0px_0px_rgba(51,51,51,1)] focus:shadow-[2px_2px_0px_0px_rgba(51,51,51,1)] focus:translate-x-0.5 focus:translate-y-0.5 focus:outline-none transition"
+                                placeholder="Hola, quisiera saber..."></textarea>
                         </div>
-                        <button type="submit" class="sketchy-button w-full bg-brand-dark text-white font-bold py-4 px-6 rounded-xl hover:bg-gray-800 transition text-xl">
+                        <button type="submit"
+                            class="sketchy-button w-full bg-brand-dark text-white font-bold py-4 px-6 rounded-xl hover:bg-gray-800 transition text-xl">
                             Enviar Consulta
                         </button>
                     </form>
                 </div>
 
-                <div class="bg-brand-cyan rounded-3xl p-10 text-brand-dark flex flex-col justify-between sketchy-border relative overflow-hidden rotate-sketch-n1">
+                <div
+                    class="bg-brand-cyan rounded-3xl p-10 text-brand-dark flex flex-col justify-between sketchy-border relative overflow-hidden rotate-sketch-n1">
                     <div class="absolute top-0 right-0 -mt-10 -mr-10 text-brand-dark/10 text-9xl rotate-12">
                         <i class="fas fa-map-marked-alt"></i>
                     </div>
@@ -281,19 +381,22 @@
                         <h3 class="text-3xl font-extrabold mb-8">Visitanos en Eldorado</h3>
                         <div class="space-y-6 text-lg font-bold">
                             <div class="flex items-start gap-4">
-                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center sketchy-border shrink-0 shadow-none">
+                                <div
+                                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center sketchy-border shrink-0 shadow-none">
                                     <i class="fas fa-map-marker-alt text-brand-red text-xl"></i>
                                 </div>
                                 <p>Av. San Martín 1234 (Ejemplo),<br>Eldorado, Misiones.</p>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center sketchy-border shrink-0 shadow-none">
+                                <div
+                                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center sketchy-border shrink-0 shadow-none">
                                     <i class="fas fa-phone text-brand-green text-xl"></i>
                                 </div>
                                 <p>+54 3751 12-3456</p>
                             </div>
                             <div class="flex items-center gap-4">
-                                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center sketchy-border shrink-0 shadow-none">
+                                <div
+                                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center sketchy-border shrink-0 shadow-none">
                                     <i class="fas fa-envelope text-brand-yellow text-xl"></i>
                                 </div>
                                 <p>info@learningcentre.com</p>
@@ -301,8 +404,10 @@
                         </div>
                     </div>
 
-                    <div class="mt-10 bg-white h-64 rounded-2xl w-full flex items-center justify-center text-gray-500 overflow-hidden sketchy-border relative z-10 shadow-none rotate-sketch-1">
-                        <span class="text-lg font-bold bg-white px-6 py-3 rounded-xl sketchy-border flex items-center gap-2 shadow-none hover:shadow-[2px_2px_0px_0px_rgba(51,51,51,1)] transition cursor-pointer">
+                    <div
+                        class="mt-10 bg-white h-64 rounded-2xl w-full flex items-center justify-center text-gray-500 overflow-hidden sketchy-border relative z-10 shadow-none rotate-sketch-1">
+                        <span
+                            class="text-lg font-bold bg-white px-6 py-3 rounded-xl sketchy-border flex items-center gap-2 shadow-none hover:shadow-[2px_2px_0px_0px_rgba(51,51,51,1)] transition cursor-pointer">
                             <i class="fas fa-map text-brand-red"></i> Abrir en Google Maps
                         </span>
                     </div>
@@ -313,23 +418,48 @@
     </section>
 
     <footer class="bg-white text-brand-dark py-12 relative overflow-hidden border-t-4 border-brand-dark">
-        
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
             <div class="flex flex-col items-center md:items-start gap-4">
-                 <img src="images/logo.png" alt="Learning Centre Academia de Inglés Completo" class="h-32 w-auto object-contain rotate-sketch-n1">
+                <img src="images/logo.png" alt="Learning Centre Academia de Inglés Completo"
+                    class="h-32 w-auto object-contain rotate-sketch-n1">
             </div>
-            
+
             <div class="text-center md:text-right">
                 <p class="text-brand-dark font-bold text-lg mb-4">© 2024 Learning Centre Eldorado.</p>
-                
+
                 <div class="flex space-x-6 justify-center md:justify-end">
-                    <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-cyan hover:text-brand-dark transition transform hover:scale-110 hover:rotate-3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"><i class="fab fa-facebook-f text-xl"></i></a>
-                    <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-red hover:text-white transition transform hover:scale-110 hover:rotate-n3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"><i class="fab fa-instagram text-xl"></i></a>
-                    <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-green hover:text-brand-dark transition transform hover:scale-110 hover:rotate-3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"><i class="fab fa-whatsapp text-xl"></i></a>
+                    <a href="#"
+                        class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-cyan hover:text-brand-dark transition transform hover:scale-110 hover:rotate-3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"><i
+                            class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="#"
+                        class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-red hover:text-white transition transform hover:scale-110 hover:rotate-n3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"><i
+                            class="fab fa-instagram text-xl"></i></a>
+                    <a href="#"
+                        class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-green hover:text-brand-dark transition transform hover:scale-110 hover:rotate-3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"><i
+                            class="fab fa-whatsapp text-xl"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Cierra el menú si se hace click en un enlace
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+
 </body>
+
 </html>
