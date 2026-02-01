@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Cursos - Learning Centre</title>
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: { dark: '#333333', red: '#E63946', cyan: '#4CC9F0', green: '#A7C957', yellow: '#FFBD00', light: '#F7F9FB' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .sketchy-border {
+            border: 3px solid #333333;
+            box-shadow: 4px 4px 0px 0px rgba(51, 51, 51, 1);
+        }
+
+        .sketchy-button {
+            border: 3px solid #333333;
+            box-shadow: 3px 3px 0px 0px rgba(51, 51, 51, 1);
+            transition: all 0.2s;
+        }
+
+        .sketchy-button:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 1px 1px 0px 0px #333;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-brand-dark font-sans">
+
+    <nav class="bg-white border-b-2 border-brand-dark py-4 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-black flex items-center gap-2">
+                <i class="fas fa-arrow-left text-brand-red"></i> Volver al Inicio
+            </a>
+            <a href="https://wa.me/543751530009?text=Hola,%20quiero%20consultar%20sobre%20los%20cursos"
+                class="sketchy-button bg-brand-green px-4 py-2 rounded-lg font-bold text-brand-dark">
+                <i class="fab fa-whatsapp"></i> Consultar
+            </a>
+        </div>
+    </nav>
+
+    <header class="relative bg-brand-light py-20 overflow-hidden border-b-3 border-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 relative z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 relative inline-block">
+                <span
+                    class="absolute inset-0 bg-brand-yellow transform -rotate-1 rounded-lg -z-10 border-3 border-brand-dark"></span>
+                Nuestros Cursos
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mt-6 font-medium text-gray-700">
+                Encontrá el nivel perfecto para vos. Modalidad presencial y virtual para todas las edades.
+            </p>
+        </div>
+        <div class="absolute top-10 left-10 opacity-20 text-8xl text-brand-cyan"><i class="fas fa-shapes"></i></div>
+        <div class="absolute bottom-10 right-10 opacity-20 text-8xl text-brand-red"><i
+                class="fas fa-graduation-cap"></i></div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 py-16 space-y-24">
+
+        <!-- EARLY YEARS -->
+        <section id="early-years">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black inline-block px-4 py-1 relative">
+                    <span class="absolute inset-0 bg-brand-cyan/30 transform skew-x-12 rounded -z-10"></span>
+                    Early Years
+                </h2>
+                <div class="mt-6 max-w-3xl mx-auto">
+                    <p class="text-sm text-gray-600 font-medium leading-relaxed">
+                        Primeros pasos en el idioma inglés. Actividades lúdicas y educativas para los más pequeños.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Kinder 1 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/kids1.png" alt="Kinder 1" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Lunes a Viernes
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Kinder 1</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Introducción al inglés a través de canciones, juegos y actividades interactivas.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Kinder%201"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kinder 2 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/kids2.png" alt="Kinder 2" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Lunes a Viernes
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Kinder 2</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Continuación con vocabulario más avanzado y primeras estructuras gramaticales.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Kinder%202"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JUNIORS -->
+        <section id="juniors">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black inline-block px-4 py-1 relative">
+                    <span class="absolute inset-0 bg-brand-cyan/30 transform skew-x-12 rounded -z-10"></span>
+                    Juniors
+                </h2>
+                <div class="mt-6 max-w-3xl mx-auto">
+                    <p class="text-sm text-gray-600 font-medium leading-relaxed">
+                        Desarrollo progresivo de habilidades en inglés. Enfoque comunicativo y dinámico.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Juniors 1 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/juniors1.png" alt="Juniors 1" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Martes y Jueves
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Juniors 1</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Consolidación de vocabulario básico y expresiones cotidianas en inglés.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Juniors%201"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Juniors 2 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/juniors2.png" alt="Juniors 2" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Martes y Jueves
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Juniors 2</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Introducción a tiempos verbales simples y conversaciones más complejas.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Juniors%202"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Juniors 3 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/juniors3.png" alt="Juniors 3" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Miércoles y Viernes
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Juniors 3</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Desarrollo de competencias de comprensión auditiva y expresión oral.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Juniors%203"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRE TEENS -->
+        <section id="pre-teens">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black inline-block px-4 py-1 relative">
+                    <span class="absolute inset-0 bg-brand-cyan/30 transform skew-x-12 rounded -z-10"></span>
+                    Pre Teens
+                </h2>
+                <div class="mt-6 max-w-3xl mx-auto">
+                    <p class="text-sm text-gray-600 font-medium leading-relaxed">
+                        Preparación para adolescentes. Énfasis en comunicación práctica y confianza.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pre Teens 1 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/preteens1.png" alt="Pre Teens 1" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Lunes y Miércoles
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Pre Teens 1</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Consolidación de habilidades lingüísticas para pre adolescentes. Conversaciones cotidianas.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Pre%20Teens%201"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pre Teens 2 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/preteens2.png" alt="Pre Teens 2" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Martes y Jueves
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Pre Teens 2</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Avance hacia el nivel adolescente. Preparación para certificaciones internacionales.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Pre%20Teens%202"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEENS -->
+        <section id="teens">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black inline-block px-4 py-1 relative">
+                    <span class="absolute inset-0 bg-brand-cyan/30 transform skew-x-12 rounded -z-10"></span>
+                    Teens
+                </h2>
+                <div class="mt-6 max-w-3xl mx-auto">
+                    <p class="text-sm text-gray-600 font-medium leading-relaxed">
+                        Para adolescentes. Desarrollo de competencias avanzadas y preparación para exámenes
+                        internacionales.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teens 1 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/teens1.png" alt="Teens 1" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Lunes y Miércoles
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Teens 1</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Inglés para adolescentes. Vocabulario avanzado y expresiones idiomáticas.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Teens%201"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teens 2 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/teens2.png" alt="Teens 2" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Martes y Jueves
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Teens 2</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Profundización de habilidades. Preparación para certificados de Cambridge.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Teens%202"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Teens 3 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/teens3.png" alt="Teens 3" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Miércoles y Viernes
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Teens 3</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Nivel avanzado. Fluidez y precisión en contextos académicos y sociales.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Teens%203"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADULTS -->
+        <section id="adults">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black inline-block px-4 py-1 relative">
+                    <span class="absolute inset-0 bg-brand-cyan/30 transform skew-x-12 rounded -z-10"></span>
+                    Adults
+                </h2>
+                <div class="mt-6 max-w-3xl mx-auto">
+                    <p class="text-sm text-gray-600 font-medium leading-relaxed">
+                        Programas especializados para adultos. Desde principiante hasta nivel profesional.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pre A1 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/prea1.png" alt="Pre A1" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Lunes y Viernes
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">Pre A1</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Iniciación al inglés para adultos. Fundamentos básicos con enfoque práctico.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20Pre%20A1"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A1 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/a1.png" alt="A1" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Martes y Jueves
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">A1</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Nivel elemental. Vocabulario y expresiones útiles para la vida cotidiana.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20A1"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- A2 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/a2.png" alt="A2" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Lunes y Miércoles
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">A2</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Pre-intermedio. Conversaciones simples y comprensión de textos usuales.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20A2"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B1 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/b1.png" alt="B1" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Martes y Viernes
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">B1</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Nivel intermedio. Fluidez en conversaciones y comprensión auditiva avanzada.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20B1"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- B2 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/b2.png" alt="B2" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Miércoles y Sábados
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">B2</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Nivel intermedio-alto. Preparación para certificaciones profesionales.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20B2"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- C1 -->
+                <div
+                    class="bg-white rounded-2xl overflow-hidden sketchy-border flex flex-col h-full hover:-translate-y-2 transition-transform duration-300">
+                    <div class="h-56 bg-gray-200 border-b-3 border-brand-dark overflow-hidden relative group">
+                        <img src="images/c1.png" alt="C1" class="w-full h-full object-cover">
+                        <div
+                            class="absolute top-4 right-4 bg-brand-yellow text-brand-dark font-bold px-3 py-1 rounded-lg border-2 border-brand-dark shadow-sm">
+                            Jueves y Domingos
+                        </div>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <h3 class="text-xl font-extrabold mb-3 leading-tight">C1</h3>
+                        <p class="text-gray-600 font-medium mb-6 line-clamp-3">
+                            Nivel avanzado. Dominio profesional y académico del inglés.
+                        </p>
+                        <div class="mt-auto flex flex-col gap-3">
+                            <a href="#"
+                                class="sketchy-button w-full py-3 bg-white text-brand-dark text-center font-bold rounded-xl hover:bg-gray-50 flex items-center justify-center gap-2 border-2 border-brand-dark">
+                                <i class="fas fa-plus-circle text-brand-cyan"></i> Ver más info
+                            </a>
+                            <a href="https://wa.me/543751530009?text=Hola,%20me%20interesa%20el%20curso%20C1"
+                                target="_blank"
+                                class="sketchy-button w-full py-3 bg-brand-dark text-white text-center font-bold rounded-xl hover:bg-gray-800 shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]">
+                                <i class="fab fa-whatsapp mr-2"></i> Inscribirme
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="bg-white text-brand-dark py-12 relative overflow-hidden border-t-4 border-brand-dark">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-8 relative z-10">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <img src="images/logo.png" alt="Learning Centre Academia de Inglés Completo"
+                    class="h-32 w-auto object-contain rotate-sketch-n1">
+            </div>
+
+            <div class="text-center md:text-right">
+                <p class="text-brand-dark font-bold text-lg mb-4">© 2026 Learning Centre Eldorado.</p>
+                <div class="flex space-x-6 justify-center md:justify-end">
+                    <a href="https://www.facebook.com/LearningCentreAcademiaDeIngles/?locale=es_LA" target="_blank"
+                        rel="noopener noreferrer"
+                        class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-cyan hover:text-brand-dark transition transform hover:scale-110 hover:rotate-3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"
+                        title="Visitanos en Facebook"><i class="fab fa-facebook-f text-xl"></i></a>
+                    <a href="https://instagram.com/learning.centre19" target="_blank" rel="noopener noreferrer"
+                        class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-red hover:text-white transition transform hover:scale-110 hover:rotate-n3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"
+                        title="Seguinos en Instagram"><i class="fab fa-instagram text-xl"></i></a>
+                    <a href="https://wa.me/3751530009" target="_blank" rel="noopener noreferrer"
+                        class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-green hover:text-brand-dark transition transform hover:scale-110 hover:rotate-3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"
+                        title="Escribinos por WhatsApp"><i class="fab fa-whatsapp text-xl"></i></a>
+                    <a href="mailto:learningcentre.srf@gmail.com"
+                        class="w-12 h-12 flex items-center justify-center rounded-full border-3 border-brand-dark text-brand-dark hover:bg-brand-yellow hover:text-brand-dark transition transform hover:scale-110 hover:rotate-n3 shadow-[3px_3px_0px_0px_rgba(51,51,51,1)] hover:shadow-none"
+                        title="Envianos un email"><i class="fas fa-envelope text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll suave al cargar la página si hay un hash en la URL
+        window.addEventListener('DOMContentLoaded', function () {
+            const hash = window.location.hash;
+            if (hash) {
+                const target = document.querySelector(hash);
+                if (target) {
+                    // Pequeño delay para que el nav sticky ya esté renderizado
+                    setTimeout(() => {
+                        const navHeight = document.querySelector('nav').offsetHeight;
+                        const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+                        window.scrollTo({
+                            top: elementPosition - navHeight - 20,
+                            behavior: 'smooth'
+                        });
+                    }, 150);
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
