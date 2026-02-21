@@ -4,6 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Academia de inglés Learning Centre en Eldorado, Misiones: clases dinámicas para todas las edades con metodología comunicativa.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Learning Centre – Academia de Inglés en Eldorado">
+    <meta property="og:description"
+        content="Clases dinámicas y divertidas para niños, adolescentes y adultos con metodología comunicativa.">
+    <meta property="og:image" content="https://tusitio.com/images/logoLEARNING3.png">
+    <meta property="og:url" content="https://tusitio.com">
+    <link rel="canonical" href="https://tusitio.com/">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Learning Centre – Academia de Inglés en Eldorado">
+    <meta name="twitter:description"
+        content="Clases dinámicas y divertidas para niños, adolescentes y adultos con metodología comunicativa.">
+    <meta name="twitter:image" content="https://tusitio.com/images/logoLEARNING3.png">
     <title>Learning Centre - Academia de Inglés en Eldorado</title>
     <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -17,7 +33,8 @@
                             dark: '#333333',
                             red: '#E63946',
                             cyan: '#4CC9F0',
-                            green: '#A7C957',
+                            /* ✅ CAMBIO: verde más llamativo */
+                            green: '#2DC653',
                             yellow: '#FFBD00',
                             light: '#F7F9FB'
                         }
@@ -39,6 +56,29 @@
                 }
             }
         }
+    </script>
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationOrganization",
+      "name": "Learning Centre",
+      "url": "https://tusitio.com",
+      "logo": "https://tusitio.com/images/logoLEARNING3.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "San Juan 1595",
+        "addressLocality": "Eldorado",
+        "addressRegion": "Misiones",
+        "postalCode": "XXX",
+        "addressCountry": "AR"
+      },
+      "telephone": "+543751530009",
+      "sameAs": [
+        "https://www.facebook.com/LearningCentreAcademiaDeIngles",
+        "https://instagram.com/learning.centre19"
+      ]
+    }
     </script>
     <style>
         html {
@@ -76,6 +116,24 @@
         .rotate-sketch-n2 {
             transform: rotate(-2deg);
         }
+
+        /* ✅ Texto vertical para los niveles */
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            transform: rotate(180deg);
+        }
+
+        /* ✅ Modal mejorado para imagen niveles */
+        #modal-niveles {
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow: auto;
+        }
+
+        #modal-niveles::backdrop {
+            background: rgba(0, 0, 0, 0.75);
+        }
     </style>
 </head>
 
@@ -91,8 +149,9 @@
                 <div class="flex justify-between h-20 md:h-24 items-center">
 
                     <div class="flex-shrink-0 flex items-center cursor-pointer">
+                        <!-- ✅ CAMBIO: logo más grande h-12→h-16, md:h-16→md:h-20 -->
                         <img src="images/logoLEARNING3.png" alt="Learning Centre"
-                            class="h-12 md:h-16 w-auto object-contain animate-pulse-slow">
+                            class="h-16 md:h-20 w-auto object-contain animate-pulse-slow" loading="lazy">
                     </div>
 
                     <div class="hidden md:flex space-x-8 items-center">
@@ -147,7 +206,7 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION CON IMAGEN -->
+    <!-- HERO SECTION -->
     <section id="inicio" class="pt-32 pb-20 lg:pt-32 lg:pb-32 overflow-hidden bg-white relative">
         <div class="absolute top-1/4 -left-20 md:left-0 opacity-10 z-0 transform -rotate-12 pointer-events-none">
             <img src="images/logo3.png" alt="Mundo Learning Centre" class="w-[500px] md:w-[700px] h-auto">
@@ -157,15 +216,12 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <!-- Texto -->
                 <div class="text-center lg:text-left relative">
-                    <span
-                        class="inline-block py-2 px-4 rounded-full bg-brand-cyan/10 text-brand-cyan font-bold text-sm mb-6 border-2 border-brand-cyan/20 rotate-sketch-n2">
-                        📍 Eldorado, Misiones
-                    </span>
+
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-dark leading-tight mb-8">
                         <span class="relative inline-block px-3 py-2">
                             <span
                                 class="absolute inset-0 bg-brand-yellow transform -skew-y-1 rounded-lg -z-10 border-3 border-brand-dark shadow-[4px_4px_0px_0px_rgba(51,51,51,1)]"></span>
-                            <span class="relative">Abrí tu mundo hablando inglés.</span>
+                            <span class="relative">"Abrí tu mundo hablando inglés"</span>
                         </span>
                     </h1>
                     <p class="text-xl text-gray-700 mb-10 max-w-lg mx-auto lg:mx-0 font-medium leading-relaxed">
@@ -197,13 +253,14 @@
                     <div
                         class="relative rounded-3xl overflow-hidden sketchy-border bg-gray-100 aspect-[4/3] z-10 rotate-sketch-n1">
                         <img src="images/childrensandteacher.png" alt="Estudiantes felices Learning Centre"
-                            class="w-full h-full object-cover">
+                            class="w-full h-full object-cover" loading="lazy">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- METODOLOGÍA -->
     <section id="metodologia"
         class="bg-brand-light py-24 border-t-3 border-b-3 border-brand-dark relative overflow-hidden">
         <div class="absolute top-10 left-10 opacity-10 text-9xl text-brand-cyan rotate-12"><i
@@ -212,11 +269,12 @@
                 class="fas fa-lightbulb"></i></div>
 
         <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <!-- más acolchado y rotación invertida para el signo de apertura -->
             <h2
-                class="text-4xl md:text-5xl font-extrabold text-center mb-4 relative inline-block left-1/2 transform -translate-x-1/2 px-4">
+                class="text-4xl md:text-5xl font-extrabold text-center mb-4 relative inline-block left-1/2 transform -translate-x-1/2 px-8 py-4">
                 <span
-                    class="absolute inset-0 bg-brand-green/30 transform skew-y-2 rounded-lg -z-10 border-2 border-brand-dark"></span>
-                ¿Por qué elegirnos?
+                    class="absolute inset-0 bg-brand-green/30 transform -skew-y-2 rounded-lg -z-10 border-2 border-brand-dark"></span>
+                <span class="inline-block transform rotate-n1">¿Por qué elegirnos?</span>
             </h2>
             <p class="text-center text-gray-600 font-medium mb-16 max-w-3xl mx-auto">
                 Nuestra metodología está diseñada para tu éxito.
@@ -269,7 +327,7 @@
             </div>
         </div>
     </section>
-    
+
 
     <!-- NIVELES -->
     <section class="py-24 bg-white relative overflow-hidden">
@@ -280,15 +338,24 @@
                     <div
                         class="absolute inset-0 sketchy-border rounded-3xl transform -translate-x-4 translate-y-4 bg-brand-red rotate-sketch-n2">
                     </div>
-                    <div class="relative rounded-3xl overflow-hidden sketchy-border bg-gray-100 z-10 rotate-sketch-1">
-                        <img src="images/levels.png" alt="Niveles de inglés Learning Centre"
-                            class="w-full h-full object-cover">
-                    </div>
+                    <a href="images/Niveles-marco-Eurepeo.jpg" id="open-niveles-modal"
+                        class="block relative rounded-3xl overflow-hidden sketchy-border bg-gray-100 z-10 rotate-sketch-1 cursor-zoom-in">
+                        <img src="images/Niveles-marco-Eurepeo.jpg" alt="Niveles de inglés Learning Centre"
+                            class="w-full h-auto object-contain" loading="lazy">
+                        <div
+                            class="absolute inset-0 bg-black/0 hover:bg-black/10 transition flex items-center justify-center">
+                            <span
+                                class="opacity-0 hover:opacity-100 bg-white/90 text-brand-dark font-bold px-4 py-2 rounded-xl sketchy-border transition text-sm">
+                                <i class="fas fa-search-plus mr-1"></i> Ver en grande
+                            </span>
+                        </div>
+                    </a>
                 </div>
 
                 <!-- Texto de Niveles -->
                 <div class="text-center lg:text-left order-1 lg:order-2">
-                    <h2 class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-6 relative inline-block px-4">
+                    <h2
+                        class="text-4xl md:text-5xl font-extrabold text-brand-dark mb-6 relative inline-block px-8 py-3">
                         <span
                             class="absolute inset-0 bg-brand-red/20 transform skew-y-2 rounded-lg -z-10 border-2 border-brand-dark"></span>
                         Niveles del Marco Común Europeo
@@ -325,7 +392,7 @@
     <!-- NUESTROS PROGRAMAS -->
     <section id="cursos" class="max-w-7xl mx-auto px-4 py-24 relative">
         <h2
-            class="text-4xl md:text-5xl font-extrabold text-center mb-4 relative inline-block left-1/2 transform -translate-x-1/2 px-4">
+            class="text-4xl md:text-5xl font-extrabold text-center mb-4 relative inline-block left-1/2 transform -translate-x-1/2 px-8 py-4">
             <span
                 class="absolute inset-0 bg-brand-cyan/30 transform -skew-y-2 rounded-lg -z-10 border-2 border-brand-dark"></span>
             Nuestros Programas
@@ -341,14 +408,15 @@
             </span>
         </h3>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            <!-- Pre Kinder y Kinder -->
+            <!-- Kinder 1 y Kinder 2 -->
             <div
                 class="sketchy-border bg-white rounded-2xl p-8 hover:-translate-y-2 transition-transform rotate-sketch-n1 hover:shadow-none group">
                 <div
                     class="mb-4 h-32 bg-brand-cyan flex items-center justify-center text-6xl text-brand-dark rounded-xl sketchy-border group-hover:scale-110 transition-transform">
                     <i class="fas fa-child"></i>
                 </div>
-                <h3 class="text-2xl font-extrabold mb-2">Pre Kinder y Kinder</h3>
+
+                <h3 class="text-xl font-extrabold mb-2">Kinder 1 y Kinder 2</h3>
                 <p class="text-gray-600 font-medium mb-2">De 3 a 5 años</p>
                 <p class="text-sm text-brand-yellow font-bold mb-4">Primeros pasos</p>
                 <p class="text-gray-600 mb-6">Actividades lúdicas, canciones y juegos para familiarizarse con el idioma.
@@ -366,7 +434,7 @@
                     class="mb-4 h-32 bg-brand-green flex items-center justify-center text-6xl text-white rounded-xl sketchy-border group-hover:scale-110 transition-transform">
                     <i class="fas fa-graduation-cap"></i>
                 </div>
-                <h3 class="text-2xl font-extrabold mb-2">Juniors</h3>
+                <h3 class="text-xl font-extrabold mb-2">Juniors</h3>
                 <p class="text-gray-600 font-medium mb-2">De 6 a 12 años</p>
                 <p class="text-sm text-brand-yellow font-bold mb-4">Exploradores del lenguaje</p>
                 <p class="text-gray-600 mb-6">Desarrollo progresivo con enfoque comunicativo.</p>
@@ -376,14 +444,14 @@
                 </a>
             </div>
 
-            <!-- Pre Teens / Teens -->
+            <!-- Pre-Teens / Teens -->
             <div
                 class="sketchy-border bg-white rounded-2xl p-8 hover:-translate-y-2 transition-transform rotate-sketch-n2 hover:shadow-none group">
                 <div
                     class="mb-4 h-32 bg-brand-red flex items-center justify-center text-6xl text-white rounded-xl sketchy-border group-hover:scale-110 transition-transform">
                     <i class="fas fa-rocket"></i>
                 </div>
-                <h3 class="text-2xl font-extrabold mb-2">Pre Teens / Teens</h3>
+                <h3 class="text-xl font-extrabold mb-2">Pre-Teens / Teens</h3>
                 <p class="text-gray-600 font-medium mb-2">De 12 a 16 años</p>
                 <p class="text-sm text-brand-yellow font-bold mb-4">Conectando con el futuro</p>
                 <p class="text-gray-600 mb-6">Competencias avanzadas y preparación internacional.</p>
@@ -400,7 +468,7 @@
                     class="mb-4 h-32 bg-brand-yellow flex items-center justify-center text-6xl text-brand-dark rounded-xl sketchy-border group-hover:scale-110 transition-transform">
                     <i class="fas fa-briefcase"></i>
                 </div>
-                <h3 class="text-2xl font-extrabold mb-2">Adults</h3>
+                <h3 class="text-xl font-extrabold mb-2">Adults</h3>
                 <p class="text-gray-600 font-medium mb-2">De 17 años en adelante</p>
                 <p class="text-sm text-brand-yellow font-bold mb-4">Resultados reales para metas claras</p>
                 <p class="text-gray-600 mb-6">Desde principiante hasta nivel profesional.</p>
@@ -480,8 +548,9 @@
     <!-- PREGUNTAS FRECUENTES -->
     <section class="py-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <!-- ✅ CAMBIO: más padding en recuadro del título -->
             <h2
-                class="text-4xl font-extrabold text-brand-dark mb-16 text-center relative inline-block left-1/2 transform -translate-x-1/2 px-4">
+                class="text-4xl font-extrabold text-brand-dark mb-16 text-center relative inline-block left-1/2 transform -translate-x-1/2 px-8 py-2">
                 <span
                     class="absolute inset-0 bg-brand-cyan/30 transform -skew-y-2 rounded-lg -z-10 border-2 border-brand-dark"></span>
                 Preguntas Frecuentes
@@ -533,10 +602,11 @@
     </section>
 
     <!-- HORARIOS DE ATENCIÓN -->
-    <section class="bg-brand-dark text-white py-24 border-t-4 border-brand-yellow relative overflow-hidden">
+    <!-- ✅ CAMBIO: fondo gris en lugar de negro -->
+    <section class="bg-gray-500 text-white py-24 border-t-4 border-brand-yellow relative overflow-hidden">
         <div class="absolute top-10 left-10 opacity-10 text-9xl text-brand-yellow rotate-45"><i
                 class="fas fa-clock"></i></div>
-        <div class="absolute bottom-10 right-10 opacity-10 text-9xl text-brand-cyan -rotate-45"><i
+        <div class="absolute bottom-10 right-10 opacity-10 text-brand-cyan -rotate-45 text-9xl"><i
                 class="fas fa-calendar"></i></div>
 
         <div class="max-w-7xl mx-auto px-4 text-center relative z-10">
@@ -546,6 +616,7 @@
             </p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Lunes a Jueves: fondo amarillo -->
                 <div
                     class="sketchy-border bg-brand-yellow text-brand-dark rounded-2xl pt-4 pb-4 rotate-sketch-1 hover:shadow-none hover:-translate-y-1 transition-all group">
                     <h3 class="text-2xl font-extrabold mb-2 flex items-center justify-center gap-3">
@@ -554,6 +625,7 @@
                     </h3>
                     <p class="text-4xl font-extrabold leading-none">16:00 - 20:00 hs</p>
                 </div>
+                <!-- ✅ CAMBIO: Viernes con verde vibrante (brand-green ahora es #2DC653) -->
                 <div
                     class="sketchy-border bg-brand-green text-brand-dark rounded-2xl pt-4 pb-2 rotate-sketch-n1 hover:shadow-none hover:-translate-y-1 transition-all group">
                     <h3 class="text-2xl font-extrabold mb-2 flex items-center justify-center gap-3">
@@ -564,20 +636,22 @@
                 </div>
             </div>
 
+            <!-- ✅ CAMBIO: botón WhatsApp en rojo -->
             <div class="mt-12">
                 <a href="https://wa.me/3751530009"
-                    class="sketchy-button inline-block py-3 px-8 bg-brand-green text-brand-dark font-bold rounded-xl">
+                    class="sketchy-button inline-block py-3 px-8 bg-brand-red text-white font-bold rounded-xl">
                     <i class="fab fa-whatsapp mr-2"></i> Contactanos por WhatsApp
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- SECCIÓN DE CONTACTO MEJORADA -->
+    <!-- SECCIÓN DE CONTACTO -->
     <section id="contacto" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- ✅ CAMBIO: más padding en recuadro del título -->
             <h2
-                class="text-4xl md:text-5xl font-extrabold text-center mb-4 relative inline-block left-1/2 transform -translate-x-1/2 px-4">
+                class="text-4xl md:text-5xl font-extrabold text-center mb-4 relative inline-block left-1/2 transform -translate-x-1/2 px-8 py-2">
                 <span
                     class="absolute inset-0 bg-brand-red/30 transform -skew-y-2 rounded-lg -z-10 border-2 border-brand-dark"></span>
                 ¡Contactanos!
@@ -587,7 +661,7 @@
             </p>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- FORMULARIO SIMPLIFICADO -->
+                <!-- FORMULARIO -->
                 <div class="bg-white p-8 rounded-3xl sketchy-border rotate-sketch-1">
                     <form class="space-y-6" id="contact-form">
                         <div>
@@ -635,7 +709,6 @@
 
                 <!-- INFORMACIÓN + MAPA -->
                 <div class="space-y-6">
-                    <!-- Info de contacto -->
                     <div
                         class="bg-brand-cyan rounded-3xl p-8 text-brand-dark sketchy-border rotate-sketch-n1 relative overflow-hidden">
                         <div class="absolute top-0 right-0 -mt-10 -mr-10 text-brand-dark/10 text-9xl rotate-12">
@@ -753,7 +826,21 @@
         </div>
     </dialog>
 
+   <dialog id="modal-niveles"
+        class="rounded-2xl p-0 border-0 bg-transparent w-[90vw] max-w-4xl">
+        <div class="sketchy-border rounded-2xl overflow-hidden bg-white">
+            <img id="modal-niveles-img" src="" alt="Niveles Marco Europeo" class="w-full h-auto block">
+            <div class="p-3 bg-white flex justify-center">
+                <button onclick="document.getElementById('modal-niveles').close()"
+                    class="sketchy-button bg-white text-brand-dark rounded-xl px-4 py-2 font-bold text-sm hover:bg-red-50">
+                    <i class="fas fa-times mr-1"></i> Cerrar
+                </button>
+            </div>
+        </div>
+    </dialog>
+
     <script>
+        // Menú móvil
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         const overlay = document.getElementById('mobile-overlay');
@@ -768,25 +855,18 @@
             if (isMenuOpen) {
                 overlay.classList.remove('opacity-0', 'pointer-events-none');
                 overlay.classList.add('opacity-100', 'pointer-events-auto');
-
                 menu.classList.remove('opacity-0', '-translate-y-5', 'pointer-events-none');
                 menu.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
-
                 icon.classList.remove('fa-bars');
                 icon.classList.add('fa-times');
-
                 document.body.style.overflow = 'hidden';
-
             } else {
                 overlay.classList.remove('opacity-100', 'pointer-events-auto');
                 overlay.classList.add('opacity-0', 'pointer-events-none');
-
                 menu.classList.remove('opacity-100', 'translate-y-0', 'pointer-events-auto');
                 menu.classList.add('opacity-0', '-translate-y-5', 'pointer-events-none');
-
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
-
                 document.body.style.overflow = '';
             }
         }
@@ -795,7 +875,7 @@
         overlay.addEventListener('click', toggleMenu);
         links.forEach(link => link.addEventListener('click', toggleMenu));
 
-        // Formulario de contacto
+        // Formulario WhatsApp
         function enviarWhatsApp() {
             const nombre = document.getElementById('nombre').value;
             const objetivo = document.getElementById('objetivo').value;
@@ -810,6 +890,28 @@
             const url = `https://wa.me/3751530009?text=${encodeURIComponent(mensaje)}`;
             window.open(url, '_blank');
         }
+
+// ✅ Modal imagen niveles mejorado
+        const nivelesLink = document.getElementById('open-niveles-modal');
+        const nivelesModal = document.getElementById('modal-niveles');
+        const nivelesImg = document.getElementById('modal-niveles-img');
+
+        if (nivelesLink && nivelesModal && nivelesImg) {
+            nivelesLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                nivelesImg.src = this.href;
+                nivelesModal.showModal();
+            });
+        }
+
+        // Cerrar modal de niveles al hacer click en el backdrop
+        nivelesModal.addEventListener('click', function (e) {
+            const rect = nivelesModal.getBoundingClientRect();
+            if (e.clientX < rect.left || e.clientX > rect.right ||
+                e.clientY < rect.top || e.clientY > rect.bottom) {
+                nivelesModal.close();
+            }
+        });
     </script>
 
 </body>
